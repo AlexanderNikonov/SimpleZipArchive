@@ -65,8 +65,8 @@ Specify an array of directories
 ### Returns the contents of the file in the archive ###
 
     $ZIP = new SimpleZipArchive('test.zip');
-    $ZIP->GetFrom = 'file1.txt';
-    $ZIP->SimpleZip();
+    $ZIP->GetFrom = 'index.php';
+    $content = $ZIP->SimpleZip();
     
 ### Delate File ###
 
@@ -83,8 +83,8 @@ Specify an array of directories
 ### Detailed information about the file ###
 
     $ZIP = new SimpleZipArchive('test.zip');
-    $ZIP->statName = 'file.txt';
-    $ZIP->SimpleZip();
+    $ZIP->statName = 'index.php';
+    var_dump($ZIP->SimpleZip());
 
 ### Rename file ###
     $ZIP = new SimpleZipArchive('test.zip');##
